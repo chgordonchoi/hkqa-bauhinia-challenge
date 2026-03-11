@@ -9,11 +9,13 @@
 	<title>
 	HKQA Tournament Menu
 	</title>
-	
-	<style>
-	@import url('https://fonts.googleapis.com/css2?family=Lexend:ital,wght@0,200..800;1,200..800&family=Noto+Sans+HK:wght@100..900&display=swap');
-	
-	body {
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Sans+HK:wght@100..900&display=swap" rel="stylesheet">
+
+	<style>	
+	html {
 		background: rgba(64, 27, 38, 0.55);
 	}
 	
@@ -29,25 +31,31 @@
 	.hub-shell {
 	  max-width: 1180px;
 	  margin: 0 auto;
-	  padding: 4.5rem 1.5rem 3rem;
+	  padding: 5.5rem 1.5rem 3rem;
 	}
 
 	.hub-hero {
 	  text-align: center;
 	  margin-bottom: 2.5rem;
+	  padding-top: 1.25rem;
 	}
 
 	.hub-kicker {
-	  margin: 0 0 0.75rem;
-	  font-size: 0.95rem;
-	  letter-spacing: 0.08em;
-	  text-transform: uppercase;
-	  color: rgba(255,255,255,0.72);
+		margin: 0 0 1rem;
+		font-size: 0.95rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: rgba(255,255,255,0.72);
 	}
-
+	
+	h1, h2 {
+		color: #EEE;
+	}
+	
 	.hub-hero h1 {
 	  margin: 0;
-	  font-size: clamp(2.4rem, 6vw, 4.2rem);
+	  font-size: clamp(2rem, 4.8vw, 3.4rem); /* 比原本細 */
+	  line-height: 1.1;
 	  font-weight: 800;
 	}
 
@@ -62,6 +70,13 @@
 	  display: grid;
 	  grid-template-columns: repeat(2, minmax(0, 1fr));
 	  gap: 1.5rem;
+	}
+
+	@media (min-width: 1000px) {
+	  .event-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr)); /* 闊屏左右並列 */
+		align-items: stretch;
+	  }
 	}
 
 	.event-card {
@@ -178,7 +193,7 @@
 	  display: flex;
 	  flex-direction: column;
 	  align-items: center;
-	  gap: 0.75rem;
+	  gap: 1.25rem;
 	}
 
 	.site-footer .social-pill { width: fit-content; }
@@ -240,7 +255,7 @@
 	}
 	</style>
 </head>
-<body>
+<body class="hub-page">
 	<section class="hub-hero">
 		<p class="hub-kicker">Hong Kong Quadball Association</p>
 		<h1>HKQA Tournaments<br>香港魁地奇總會賽事專頁</h1>
