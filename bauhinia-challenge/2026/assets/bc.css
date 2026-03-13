@@ -10,6 +10,7 @@
   --bc-secondary-1: #BB0255;      /* Borders */
   --bc-secondary-2: #B60253;      /* Shadows light */
   --bc-secondary-dark: #920142;   /* Deep shadows */
+  --bc-headings: #fe8cbf; /* Tint of #EB026B */
   --bg-pink-1: #3b001b;  /* from #C6025A */
   --bg-pink-2: #42001e;  /* from #DC0264 */
   --bg-pink-3: #460020;  /* from #EB026B - Primary base */
@@ -46,6 +47,10 @@ body {
 }
 
 /* Typography */
+.hero-title-img h1 {
+	color: #feb3d5;
+}
+
 .section-title.en,
 h1.en, h2.en, h3.en {
   font-family: "Lexend", sans-serif;
@@ -81,7 +86,7 @@ p, li {
 .detail-item h3 { 
 	font-family: 'Lexend', sans-serif; 
 	font-weight: 600; 
-	color: var(--bc-primary) !important; 
+	color: var(--bc-headings) !important; 
 	margin-bottom: 1rem; 
 	font-size: 1.4rem; 
 }
@@ -490,7 +495,7 @@ html.lang-en .nav-link.en { display: block; }
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, #FFD700, #FFA500);
+  background: linear-gradient(135deg, var(--bc-headings), #FFA5D9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
